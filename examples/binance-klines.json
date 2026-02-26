@@ -55,7 +55,7 @@
     },
     {
       "parameters": {
-        "jsCode": "const all = $input.all()\n\nconst {symbol} = $('Edit Fields').first().json\n\nreturn { \"price\": +all[0].json[1], symbol };"
+        "jsCode": "const all = $input.all();\n\nconst { symbol } = $(\"Edit Fields\").first().json;\n\nconst price = (+$input.first().json[1] / 1e3).toFixed(0) + 'k'\n\nreturn { price, symbol };\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -143,7 +143,7 @@
     "binaryMode": "separate",
     "availableInMCP": false
   },
-  "versionId": "082e8504-7101-4194-abdc-5e52bbd609e1",
+  "versionId": "d33ba740-997c-4287-9365-6890d8b24e4c",
   "meta": {
     "instanceId": "a72fe7c162cb379d8257700d2be4638017914593abb41bb927bef7b74f698607"
   },
